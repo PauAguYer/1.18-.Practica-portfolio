@@ -1,0 +1,141 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(180deg, #ff9a76, #ffd77e);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Header */
+header {
+    background-color: #e17055;
+    text-align: center;
+    padding: 1.5em 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Main */
+main {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    
+}
+
+/* Sección */
+section {
+    margin-bottom: 2em;
+}
+
+section h2 {
+    color: #e17055;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid #e17055;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+/* Lista de repositorios */
+/* Diseño general */
+.repo-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
+    gap: 1.5em;
+}
+
+/* Centrar últimas prácticas */
+.repo.last-row {
+    grid-column: span 2; /* Ocupan dos columnas */
+    justify-self: center; /* Centra el elemento en la cuadrícula */
+}
+
+
+
+.repo {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5em;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #333;
+    text-align: center;
+}
+
+.repo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.repo h3 {
+    margin: 0 0 1em;
+    font-size: 1.5em;
+    color: #e17055;
+}
+
+/* Botones */
+.repo .btn {
+    display: inline-block;
+    width: 45%;
+    padding: 0.5em 1em;
+    margin: 0.5em 2%;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background: #e17055;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.repo .btn:hover {
+    background: #d35400;
+    transform: translateY(-3px);
+}
+
+.repo .btn.repo-btn {
+    background: #fdcb6e;
+}
+
+.repo .btn.repo-btn:hover {
+    background: #f9a825;
+}
+
+
+/* Ajuste responsive */
+@media (max-width: 1024px) {
+    .repo-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .repo-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .repo-list {
+        grid-template-columns: 1fr;
+    }
+    .repo .btn {
+        width: 90%;
+    }
+}
